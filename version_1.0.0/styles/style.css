@@ -172,7 +172,7 @@
     
     
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     
     
     
@@ -276,8 +276,11 @@
 
 }
 
+#search_bar{ 
+    caret-color: #A90636;
+    
+}
 
-/*!!!!!!to check how it works in mobile version*/
 
 #search_color:hover .hint,
 input:focus ~ div{
@@ -285,6 +288,10 @@ input:focus ~ div{
 }
 
 #search_color input:focus ~ .hint{
+    opacity: 1;
+} 
+
+#search_bar:focus-visible ~ .hint{
     opacity: 1;
 } 
 
@@ -296,7 +303,7 @@ input:focus ~ div{
     display: flex;
     justify-content: center;    
     
-    padding-left: 5px;
+    padding-left: 0px;
     border: none;
     font-size: 10px;
     
@@ -306,7 +313,23 @@ input:focus ~ div{
     
 }
 
+/*to make hover work on a touch screen in some cases*/
 
+@media (hover: none) and (pointer: coarser) {
+    #search_color:hover .hint,
+    input:focus ~ div{
+        opacity: 1;
+    }
+
+    #search_color input:focus ~ .hint{
+        opacity: 1;
+    } 
+
+    #search_bar:focus-visible ~ .hint{
+            opacity: 1;
+    } 
+
+}
 
 
 #menu-toggle{ 
@@ -327,7 +350,7 @@ input:focus ~ div{
     top: 16vh;
     right: 0;
     border-radius: 15px;
-    z-index: 1;
+    
     background-color: white;
     border-radius: 0;
     box-shadow: 0px 5px 10px 0px #9c52f2;
@@ -368,11 +391,6 @@ input:focus ~ div{
 }
 
 #menu-toggle:checked ~ .menu{ 
-    display: block;
-
-}
-
-#menu-toggle:checked ~ .stop{
     display: block;
 
 }
@@ -450,11 +468,12 @@ input:focus ~ div{
     #page_header_search{ 
         justify-content: center;
         gap: 4rem;
+        
     }
 
     #search_color{ 
         width: 300px;
-        height: 50px;
+        height: 45px;
         align-items: start;
         justify-content: center;
         overflow: visible;
@@ -463,9 +482,14 @@ input:focus ~ div{
         
     }
 
+    #search_bar:placeholder-shown{ 
+        font-size: 16pt;
+    }
+
     .hint{ 
         position: fixed;
-        top: 100px;
+        font-size: 12pt;
+        top: 75px;
     }
 
     #search_color i{ 
@@ -476,21 +500,21 @@ input:focus ~ div{
     }
 
     #search_bar { 
-        font-size: 20pt;
+        font-size: 18pt;
         
         width: 300px;
     }
 
-    .hint{ 
-        font-size: 12pt;
-    }
+    
+
+    
 
     .menu ul li a{ 
-        font-size: 22pt;
+        font-size: 18pt;
     }
 
     .exit i{ 
-        font-size: 22pt;
+        font-size: 18pt;
     }
 
     .img_button{ 
