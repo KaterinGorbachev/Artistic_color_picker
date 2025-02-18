@@ -227,14 +227,15 @@
     border-radius: 15px;
     height: 40px;
     width: 200px;
+    overflow: nowrap;
     
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: space-between;
+    justify-content: center;
     
-    padding-top: 10px;
+    
     padding-left: 15px;
     gap: 10px;
     border-width: 1px;
@@ -253,6 +254,8 @@
 
 #search_color i{ 
     color: #A90636;
+    position: relative;
+    padding-top: 10px;
     
     
 }
@@ -278,6 +281,10 @@
 
 #search_bar{ 
     caret-color: #A90636;
+    background-color: none;
+    height: 35px;
+    
+    
     
 }
 
@@ -299,7 +306,8 @@ input:focus ~ div{
     content: "asd";
     opacity: 0;
     background: none;
-    position: top;
+    position: absolute;
+    top: 10.5vh;
     display: flex;
     justify-content: center;    
     
@@ -484,6 +492,7 @@ input:focus ~ div{
 
     #search_bar:placeholder-shown{ 
         font-size: 16pt;
+        padding-top: 10px;
     }
 
     .hint{ 
@@ -630,7 +639,8 @@ input:focus ~ div{
 
     #main_about{ 
         align-items: start;
-        padding-left: 4rem;
+        
+        width: 100vw;
     }
 
     #about_story{ 
@@ -641,16 +651,19 @@ input:focus ~ div{
 
     #about_story h2{ 
         font-size: 44pt;
+        padding-left: 4rem;
     }
 
     #about_story h3{
         font-size: 32pt;
+        padding-left: 4rem;
     }
 
     #about_story p{ 
-        font-size: 22pt;
+        font-size: 16pt;
         font-weight: lighter;
         padding-bottom: 2rem;
+        padding-left: 4rem;
 
     }
 
@@ -663,6 +676,7 @@ input:focus ~ div{
     }
     .galery_box{ 
         padding-top: 2rem;
+        padding-left: 4rem;
         display: inline-grid;
         grid-auto-rows: 300px;
         grid-auto-columns: 300px;
